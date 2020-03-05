@@ -9,10 +9,11 @@ class Api::GamesController < ApplicationController
   end
 
   def number_game
-    number = 57
-    if params[:number].to_i == 57
+    user_guess = params[:user_guess].to_i
+    answer = 57
+    if user_guess == answer
       @message = "You Win!"
-    elsif params[:number].to_i < 57
+    elsif user_guess < answer
       @message = "Too Low."
     else
       @message = "Too High."
