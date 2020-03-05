@@ -20,4 +20,9 @@ class Api::GamesController < ApplicationController
     end
     render 'number.json.jb'
   end
+
+  def segment
+    @name = params[:name]
+    render 'name.json.jb'
+  end
 end
