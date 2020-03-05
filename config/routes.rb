@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   namespace :api do
     get "/games_param" => "games#query"
     get "/guess_game/:user_guess" => "games#number_game"
-
     get "/url_segment_parameter/:name" => "games#segment"
+
+    post "/guess_a_number" => "games#guess"
   end
 end
