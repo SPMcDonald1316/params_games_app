@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     get "/url_segment_parameter/:name" => "games#segment"
 
     post "/guess_a_number" => "games#number_game"
+
+    post "/user_password" => "games#password"
   end
 end

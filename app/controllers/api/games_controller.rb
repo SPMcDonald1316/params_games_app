@@ -25,4 +25,15 @@ class Api::GamesController < ApplicationController
     @name = params[:name]
     render 'name.json.jb'
   end
+
+  def password
+    @username = params[:username]
+    @password = params[:password]
+    if @username == 'hugh' && @password == 'swordfish'
+      @message = 'Valid credentials'
+    else
+      @message = 'Invalid credentials'
+    end
+    render 'user_password.json.jb'
+  end
 end
