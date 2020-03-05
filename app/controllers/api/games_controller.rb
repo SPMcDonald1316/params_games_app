@@ -25,17 +25,4 @@ class Api::GamesController < ApplicationController
     @name = params[:name]
     render 'name.json.jb'
   end
-
-  def guess
-    user_guess = params[:user_guess].to_i
-    answer = 57
-    if user_guess == answer
-      @message = "You Win!"
-    elsif user_guess < answer
-      @message = "Too Low."
-    else
-      @message = "Too High."
-    end
-    render 'guess.json.jb'
-  end
 end
